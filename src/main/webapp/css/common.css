@@ -201,11 +201,14 @@
 .tbl_reply td .reply_box .txt { width:100%; padding-top:5px; line-height:18px;}
 .tbl_reply td .reply_box .data { color:#999b9a; font-size:11px; padding-left:5px;}
 
-.inp {border:solid 1px #c6c6c6; color:#666; padding:3px; width:95%; }
+.inp {border:solid 1px #c6c6c6; color:#666; padding:3px; width:89%; }
 .area {border:solid 1px #c6c6c6; color:#666; padding:3px; width:100%;}
 .line { width:100%;border-top:2px solid #1f7dc0; float:left;}
 .gary_line {width:100%;border-top:1px solid #dddedb; float:left; margin-bottom:15px; margin-top:15px;}
 .img_v { width:100%; float:left; text-align:center; padding-top:50px; padding-bottom:30px;}
+#rs_writer{ border: none;}
+#rs_writer:docus{outline: none;} 
+
 
 /*search*/
 .search_box {border:solid 1px #e5e5e5; background:#f9f9f9; padding:8px; margin-top:25px; text-align:center;}
@@ -396,8 +399,8 @@
 /*login*/
 .login { position:relative; width:560px; background:url('../images/sub/etc/login_box.gif') no-repeat left top; margin-left:130px; margin-top:50px; float:left; padding-bottom:100px;}
 .login h4 { position:absolute; top:40px; left:50px;}
-.login dl { padding-top:175px; padding-left:55px; float:left;}
-.login dt,.login dd { float:left; padding-right:10px; font-weight:bold;}
+.login dl { padding-top:150px; padding-left:55px; }
+.login dt,.login dd {display:inline-block; padding-right:10px; font-weight:bold;}
 .login .login_text { width:100%; clear:both; padding-top:109px;}
 .login .login_text li { background:url('../images/sub/dot_01.gif') no-repeat 0 2px; padding-left:25px; font-weight:bold; padding-bottom:10px; line-height:18px;}
 .login .login_text .f_eb7c10 { color:#eb7c10;}
