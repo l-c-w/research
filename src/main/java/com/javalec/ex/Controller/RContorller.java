@@ -1,12 +1,14 @@
 package com.javalec.ex.Controller;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.javalec.ex.Dto.RsDto;
 import com.javalec.ex.Dto.UserDto;
 import com.javalec.ex.Service.RService;
 
@@ -34,12 +36,29 @@ public class RContorller {
 	}
 	
 	//로그아웃
-		@RequestMapping("logout")
-		public String logout(HttpSession session)throws Exception {
-			session.invalidate();
+	@RequestMapping("logout")
+	public String logout(HttpSession session)throws Exception {
+		session.invalidate();
+		
+		return "redirect:login_page";
+	}
+		
+	//설문 페이지로 이동
+	@RequestMapping("researchCreate_page")
+	public String researchCreate_page(HttpServletRequest request,RsDto rsDto,Model model) {
 			
-			return "redirect:login_page";
-		}
+		return "research/researchCreate";
+	}
+	
+	@RequestMapping("researchCreate")
+	public String researchCreate(HttpServletRequest request,RsDto rsDto,Model model)throws Exception {
+		System.out.println("오냐?");
+			rService.researchCreate(rsDto, request);
+			
+			return "redirect:researchList";
+	}
+			
+	
 	
 	@RequestMapping("header")
 	public String header() {
@@ -51,12 +70,6 @@ public class RContorller {
 	public String researchChoiceReasonPopup() {
 		
 		return "research/researchChoiceReasonPopup";
-	}
-	
-	@RequestMapping("researchCreate")
-	public String researchCreate() {
-		
-		return "research/researchCreate";
 	}
 	
 	@RequestMapping("researchEdit")

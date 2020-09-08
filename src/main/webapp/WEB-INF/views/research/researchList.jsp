@@ -232,7 +232,7 @@ doGoTab = function(thisObject, tab) {
           <!-- btn--> 
           <c:if test="${sesseion_Scope.userID eq admin }">
           <span class="bbs_btn">
-          <span class="per_l"><a href="researchCreate" class="pre_r">글쓰기</a></span>
+          <span class="per_l"><a href="researchCreate_page" class="pre_r">글쓰기</a></span>
           </span> 
           </c:if>
           <!-- //btn--> 

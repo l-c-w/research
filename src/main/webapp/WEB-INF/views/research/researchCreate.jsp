@@ -173,6 +173,7 @@ doGoTab = function(thisObject, tab) {
         
        
         <div class="tbl_box">
+        <form action="researchCreate" method="post" name="research_input">
           <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tbl_type01" summary="설문조사">
             <caption>
             설문조사
@@ -186,7 +187,7 @@ doGoTab = function(thisObject, tab) {
             <col width="%"/>
             </colgroup>
             <tbody>
-            <form>
+            
               <tr>
                 <th>제목</th>
                 <td colspan="5" class="tl"><input type="text" id="rs_title" name="rs_title" class="inp" /></td>
@@ -224,16 +225,16 @@ doGoTab = function(thisObject, tab) {
               <tr>
                <td colspan="6" class="tl" id="research" style="border-bottom: none;">
                	   <div class="question" id="question_1" style="margin-bottom: 80px; ">
-                       <p><p><strong>질문 <span id="question_1num">1</span>)</strong></p><input type="text" id="aa" name="aa" class="inp"  style="width: 90.5%" />
+                       <p><p><strong>질문 <span id="question_1num">1</span>)</strong></p><input type="text" id="q1" name="question" class="inp"  style="width: 90.5%" />
                        <img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="cursor: pointer;" onclick="delete_question('question_1')"></p>
                        <br>
                         <ul style=padding-bottom: 100px; border-bottom: 2px solid black;">
     					<div id="e1">
-                        <li id="example1_1" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_1">1.</span> <input type="text" id="aa" name="aa" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_1','numbering1')"></li>
-                        <li id="example1_2" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_2">2.</span> <input type="text" id="aa" name="aa" class="inp"   /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_2','numbering1')"></li>
-                        <li id="example1_3" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_3">3.</span> <input type="text" id="aa" name="aa" class="inp"   /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_3','numbering1')"></li>
-                        <li id="example1_4" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_4">4.</span> <input type="text" id="aa" name="aa" class="inp"  /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_4','numbering1')"></li>
-                        <li id="example1_5" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_5">5.</span> <input type="text" id="aa" name="aa" class="inp"   /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_5','numbering1')"></li>
+                        <li id="example1_1" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_1">1.</span> <input type="text" id="aa" name="example1" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_1','numbering1')"></li>
+                        <li id="example1_2" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_2">2.</span> <input type="text" id="aa" name="example1" class="inp"   /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_2','numbering1')"></li>
+                        <li id="example1_3" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_3">3.</span> <input type="text" id="aa" name="example1" class="inp"   /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_3','numbering1')"></li>
+                        <li id="example1_4" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_4">4.</span> <input type="text" id="aa" name="example1" class="inp"  /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_4','numbering1')"></li>
+                        <li id="example1_5" class="example1" style="margin-bottom: 5px;">보기 <span class="numbering1" id="numbering1_5">5.</span> <input type="text" id="aa" name="example1" class="inp"   /><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('example1_5','numbering1')"></li>
                         </div>
                         <li style="padding-bottom: 20px;"><button type="button" onclick="add_example('e1','example1','numbering1')" style="float:right; margin-right:40px; width: 100px; margin-top: 10px; margin-bottom:10px;  cursor: pointer;" >보기 추가</button></li>
                         </ul>
@@ -246,13 +247,13 @@ doGoTab = function(thisObject, tab) {
                  </td>
               </tr>
               
-              <tr>
+              
+              <!-- <tr>
                <th>첨부파일</th>
                <td colspan="5" class="tl">
                		<input type="file" id="aa" name="aa" />
                </td>
-              </tr>
-              </form>
+              </tr> -->
             </tbody>
           </table>
           
@@ -261,14 +262,14 @@ doGoTab = function(thisObject, tab) {
           <span class="bbs_btn"> 
 
           <span class="wte_l"><a href="#" class="wte_r">목록</a></span>
-          <span class="per_l"><a href="#" class="pre_r">등록</a></span>
+          <span class="per_l" onclick="reg_research()" style="cursor: pointer;"><a class="pre_r">등록</a></span>
           <span class="wte_l"><a href="#" class="wte_r">취소</a></span>
           
           
 
           </span> 
           <!-- //btn--> 
-          
+          </form>
         </div>
       </div>
       
@@ -295,6 +296,8 @@ doGoTab = function(thisObject, tab) {
 		var get_nclass="."+number_class;
 		
 		
+		
+		
 		var class_array =new Array;
 		$(get_liclass).each(function() {
 			class_array.push($(this).attr('id'));
@@ -307,10 +310,10 @@ doGoTab = function(thisObject, tab) {
 		
 		var last_id=class_array[class_array.length-1];
 		var split = last_id.split('_');
-		var split_result=split[1]*1+1;		
+		var split_result=split[1]*1+1;	
 				
 		var html=`<li id=`+li_class+`_`+split_result+` class=`+li_class+` style="margin-bottom: 5px;">보기 <span class=`+number_class+` id=`+number_class+`_`+split_result+`>`+split_result+`.</span> 
-				<input type="text" id="aa" name="aa" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" 
+				<input type="text" id="aa" name=`+li_class+` class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" 
 				onclick="delete_example('`+li_class+`_`+split_result+`','`+number_class+`')"></li>`;
 				
 		$(get_ulid).append(html);
@@ -374,20 +377,22 @@ doGoTab = function(thisObject, tab) {
 		
 		var question_id="question_"+split_result;
 		
+		var q_id = "q"+split_result;
+		
 		var example_class="example"+split_result;
 		var number_class = "numbering"+split_result;
 		
 		var html=` <div class="question" id="`+question_id+`" style="margin-bottom: 80px;">
-            <p><p><strong>질문 <span id="`+question_id+`num">`+split_result+`</span>)</strong></p><input type="text" id="aa" name="aa" class="inp"  style="width: 90.5%"  />
+            <p><p><strong>질문 <span id="`+question_id+`num">`+split_result+`</span>)</strong></p><input type="text" id=`+q_id+` name="question" class="inp"  style="width: 90.5%"  />
             	<img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="cursor: pointer;" onclick="delete_question('`+question_id+`')"></p>
             <br>
              <ul >
 				<div id="e`+split_result+`">
-             <li id="`+example_class+`_1" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_1">1.</span> <input type="text" id="aa" name="aa" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_1','`+number_class+`')"></li>
-             <li id="`+example_class+`_2" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_2">2.</span> <input type="text" id="aa" name="aa" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_2','`+number_class+`')"></li>
-             <li id="`+example_class+`_3" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_3">3.</span> <input type="text" id="aa" name="aa" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_3','`+number_class+`')"></li>
-             <li id="`+example_class+`_4" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_4">4.</span> <input type="text" id="aa" name="aa" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_4','`+number_class+`')"></li>
-             <li id="`+example_class+`_5" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_5">5.</span> <input type="text" id="aa" name="aa" class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_5','`+number_class+`')"></li>
+             <li id="`+example_class+`_1" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_1">1.</span> <input type="text" id="aa" name=`+example_class+` class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_1','`+number_class+`')"></li>
+             <li id="`+example_class+`_2" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_2">2.</span> <input type="text" id="aa" name=`+example_class+` class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_2','`+number_class+`')"></li>
+             <li id="`+example_class+`_3" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_3">3.</span> <input type="text" id="aa" name=`+example_class+` class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_3','`+number_class+`')"></li>
+             <li id="`+example_class+`_4" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_4">4.</span> <input type="text" id="aa" name=`+example_class+` class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_4','`+number_class+`')"></li>
+             <li id="`+example_class+`_5" class="`+example_class+`" style="margin-bottom: 5px;">보기 <span class="`+number_class+`" id="`+number_class+`_5">5.</span> <input type="text" id="aa" name=`+example_class+` class="inp"/><img src="images/sub/btn/btn_minus.png" width="20px" height="20px" style="margin-left: 5px; cursor: pointer;" onclick="delete_example('`+example_class+`_5','`+number_class+`')"></li>
              </div>
              <li style="padding-bottom: 20px;"><button type="button" onclick="add_example('e`+split_result+`','`+example_class+`','`+number_class+`')" style="float:right; margin-right:40px; width: 80px; margin-top: 10px; margin-bottom:10px; cursor: pointer;" >보기 추가</button></li>
             
@@ -443,6 +448,12 @@ doGoTab = function(thisObject, tab) {
 			$(change_number).text((i+1));
 		}
 	}
+	
+	//질문 등록
+	function reg_research() {
+		research_input.submit();
+	}
+	
 
 </script>
 
